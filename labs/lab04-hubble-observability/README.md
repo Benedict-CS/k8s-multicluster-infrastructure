@@ -19,7 +19,7 @@ In lab3, we have deployed a simple application to Kubernetes cluster. In this la
 
 Hubble is the observability layer of Cilium and can be used to obtain cluster-wide visibility into the network and security layer of your Kubernetes cluster.
 
-![Hubble Architecture](./../imgs/lab4-hubble-architecture.png)
+![Hubble Architecture](./../assets/lab4-hubble-architecture.png)
 
 To use Hubble, we need to upgrade to Cilium with setting `hubble.relay.enabled=true` and `hubble.ui.enabled=true`.
 
@@ -232,11 +232,11 @@ open http://localhost:12000
 
 Now you can see the Hubble UI in your browser. You can choose the namespace and the application to see the packet information.
 
-![Hubble ui 1](./../imgs/lab4-hubble-ui-1.png)
+![Hubble ui 1](./../assets/lab4-hubble-ui-1.png)
 
 In default namespace, you can see the service map and the packet information of the application.
 
-![Hubble ui 2](./../imgs/lab4-hubble-ui-2.png)
+![Hubble ui 2](./../assets/lab4-hubble-ui-2.png)
 
 Let's send the request to the application again.
 
@@ -245,7 +245,7 @@ curl http://$GATEWAY
 ```
 
 Now you can see the packet information of the application in the Hubble UI.
-![Hubble ui 3](./../imgs/lab4-hubble-ui-3.png)
+![Hubble ui 3](./../assets/lab4-hubble-ui-3.png)
 
 ## Conclusion
 

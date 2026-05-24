@@ -93,7 +93,7 @@ Hostname: whoami-deployment-6d54cbf86f-t2n4x
 > Note: HAProxy is load balancing between two clusters.
 
 
-![Terminal setup](./../imgs/lab11-terminal-setup.png)
+![Terminal setup](./../assets/lab11-terminal-setup.png)
 
 
 Now try to restart the cluster2

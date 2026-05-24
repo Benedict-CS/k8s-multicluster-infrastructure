@@ -18,7 +18,7 @@ In this lab, we will deploy a simple application to a control cluster and propag
 
 The karmada architecture is shown below. To interact with the karmada control plane, we need to use the kubeconfig created in the previous lab.
 
-![karmada control plane](./../imgs/lab9-karmada-control-plane.png)
+![karmada control plane](./../assets/lab9-karmada-control-plane.png)
 
 > Reference: [Karmada Key Features](https://karmada.io/docs/key-features/features)
 

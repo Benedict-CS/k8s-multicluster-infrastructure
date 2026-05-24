@@ -13,7 +13,7 @@
 
 In lab2, we have setup Cilium Gateway API. In this lab, we will deploy a whoami application to Kubernetes cluster and expose it to the outside world.
 
-![Cilium Gateway API](./../imgs/lab2-cilium-gateway-API.png)
+![Cilium Gateway API](./../assets/lab2-cilium-gateway-API.png)
 > Reference: [Cilium release 1.13](https://isovalent.com/blog/post/cilium-release-113/)
 
 ## Step1: Deploy whoami deployment and service
@@ -102,7 +102,7 @@ whoami-service   ClusterIP   10.96.189.201   <none>        80/TCP    24s
 
 [HTTPRoute](https://gateway-api.sigs.k8s.io/api-types/httproute/) is a Gateway API type for specifying routing behavior of HTTP requests from a Gateway listener to an API object, i.e. Service. 
 
-![Gateway API Model](./../imgs/lab3-gateway-API-model.png)
+![Gateway API Model](./../assets/lab3-gateway-API-model.png)
 > Reference: [What is the Gateway API?](https://gateway-api.sigs.k8s.io/#what-is-the-gateway-api)
 
 We will use HTTPRoute to expose the application to the outside world.

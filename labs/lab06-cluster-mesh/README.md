@@ -117,7 +117,7 @@ export CLUSTER2=kind-cluster2
 
 Cilium Cluster Mesh allows you to connect the networks of multiple clusters in such a way that pods in different clusters can communicate with each other as if they were in the same cluster. This is achieved by deploying a Cilium instance in each cluster and connecting them together using a dedicated API Service.
 
-![Cluster Mesh Architecture](./../imgs/lab6-cluster-mesh-architecture.png)
+![Cluster Mesh Architecture](./../assets/lab6-cluster-mesh-architecture.png)
 
 > Reference: [Deep Dive into Cilium Multi-cluster](https://cilium.io/blog/2019/03/12/clustermesh/)
 

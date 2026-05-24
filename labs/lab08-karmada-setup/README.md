@@ -15,7 +15,7 @@
 
 [karmada](https://karmada.io/) is a Kubernetes-based multi-cloud and multi-cluster orchestration platform. It provides central management of cloud-native workloads and applications, and enables workload and application portability across clouds and clusters.
 
-![Karmada concept](./../imgs/lab8-karmada-concept.png)
+![Karmada concept](./../assets/lab8-karmada-concept.png)
 
 
 In this lab, we will create the control cluster and deploy Karmada control plane.

@@ -16,7 +16,7 @@ In lab1 we have setup a single kubernetes cluster with Cilium as CNI. In this la
 
 Cilium Gateway API is a new API that allows users to configure L3/L4 routing and load balancing for services. To learn more about Cilium Gateway API, please refer to [A Deep Dive into Cilium Gateway API: The Future of Ingress Traffic Routing](https://isovalent.com/blog/post/cilium-gateway-api/).
 
-![Cilium Gateway API](./../imgs/lab2-cilium-gateway-API.png)
+![Cilium Gateway API](./../assets/lab2-cilium-gateway-API.png)
 > Reference: [Cilium release 1.13](https://isovalent.com/blog/post/cilium-release-113/)
 
 ## Step1: Upgrade Cilium with Gateway API support

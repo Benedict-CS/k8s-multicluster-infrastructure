@@ -31,19 +31,25 @@ The infrastructure was built on **Proxmox Virtual Environment (PVE) Type-1 virtu
 
 ## Components Detail
 
-### Kind & K3s
-Utilized for rapid deployment and lightweight Kubernetes environments, perfect for testing and development of cluster nodes.
+### Kind
+[kind](https://kind.sigs.k8s.io/) (Kubernetes In Docker) is a tool that enables rapid deployment and operation of Kubernetes clusters in a local environment. Leveraging Docker container technology, it simulates multiple Kubernetes nodes on a single machine.
+
+### K3s
+[k3s](https://k3s.io/) is a lightweight Kubernetes that retains core functionalities while removing less utilized features, resulting in lower resource consumption and faster startup speed.
 
 ### Cilium
-Manages network and security services using Linux kernel features such as BPF and XDP for maximum efficiency.
+[Cilium](https://cilium.io/) provides and manages network and security services for application containers using Linux kernel features such as BPF, XDP, and IPVS for maximum efficiency.
 
 ### Karmada
-Provides central management and orchestration for cloud-native workloads across multi-cloud and multi-cluster environments.
+[karmada](https://karmada.io/) is a Kubernetes-based multi-cloud and multi-cluster orchestration platform. It provides central management of cloud-native workloads and applications across clouds and clusters.
 
 ### Monitoring Stack (Thanos + Prometheus + Grafana)
-*   **Prometheus**: Metrics collection and alerting.
-*   **Thanos**: Provides a global query view and long-term storage capabilities for highly available Prometheus setups.
-*   **Grafana**: Advanced visualization and analytics dashboard.
+*   **Prometheus**: An open source monitoring system and time series database for generating and collecting metrics.
+*   **Thanos**: Highly available Prometheus setup with long-term storage capabilities and a global query view.
+*   **Grafana**: Visualization and analytics software for turning time-series data into beautiful graphs and dashboards.
+
+### HAProxy
+[HAProxy](https://www.haproxy.org/) is a fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
 
 ---
 

@@ -119,15 +119,15 @@ open http://localhost:3000
 
 You can see the Grafana UI as below. Now we can login with username `admin` and password `prom-operator`.
 
-![grafana-login](../imgs/lab5-grafana-login.png)
+![grafana-login](../assets/lab5-grafana-login.png)
 
 In the dashboard, you can see there are some default dashboards already created by the helm chart.
 
-![grafana-dashboard](../imgs/lab5-grafana-dashboard.png)
+![grafana-dashboard](../assets/lab5-grafana-dashboard.png)
 
 You can also check any dashboard and see the monitoring metrics.
 
-![grafana-dashboard](../imgs/lab5-grafana-cluster-dashboard.png)
+![grafana-dashboard](../assets/lab5-grafana-cluster-dashboard.png)
 
 
 ## Step3: Access Prometheus
@@ -175,13 +175,13 @@ Access the prometheus UI at http://localhost:9090. You can see the prometheus UI
 open http://localhost:9090
 ```
 
-![prometheus-ui](../imgs/lab5-prometheus-ui.png)
+![prometheus-ui](../assets/lab5-prometheus-ui.png)
 
 > Note: You can search the metrics in the prometheus UI. For example, you can search `kube_pod_container_resource_requests` to see the metrics.
 
 You can also check the service monitor in the prometheus UI. Click the `Status` -> `Service Discovery` in the menu. You can see the service monitor list.
 
-![prometheus-service-monitor](../imgs/lab5-prometheus-service-monitor.png)
+![prometheus-service-monitor](../assets/lab5-prometheus-service-monitor.png)
 
 
 
@@ -260,7 +260,7 @@ helm upgrade kube-prometheus prometheus-community/kube-prometheus-stack \
 
 Back to the prometheus UI, you can see the hubble service monitor is added.
 
-![prometheus-service-monitor](../imgs/lab5-prometheus-service-monitor-2.png)
+![prometheus-service-monitor](../assets/lab5-prometheus-service-monitor-2.png)
 
 
 Back to the Grafana UI. We can create a new dashboard to visualize the hubble metrics. In the dashboard, click the `+` button and select `Import`.
@@ -269,12 +269,12 @@ Find the dashboard in the [grafana dashboard](https://grafana.com/grafana/dashbo
 
 The dashboard ID is `16613`. Enter the ID and click `Load`.
 
-![grafana-import](../imgs/lab5-grafana-import.png)
+![grafana-import](../assets/lab5-grafana-import.png)
 
 
 Now you can see the hubble metrics in the dashboard.
 
-![grafana-hubble](../imgs/lab5-grafana-hubble.png)
+![grafana-hubble](../assets/lab5-grafana-hubble.png)
 
 
 ## Conclusion

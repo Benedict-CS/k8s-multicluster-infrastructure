@@ -73,7 +73,7 @@ Use the following command to get the Argo CD password. Type the username `admin`
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
 
-![argocd-login](../imgs/lab15-argo-login.png)
+![argocd-login](../assets/lab15-argo-login.png)
 
 
 ## Step2: Interact Karmada with Argo CD
@@ -147,7 +147,7 @@ Cluster 'https://172.25.0.2:32443' added
 
 Open the Argo CD UI, click the `Settings` -> `clusters` to check the cluster we just added.
 
-![argocd-cluster](../imgs/lab15-argo-cluster.png)
+![argocd-cluster](../assets/lab15-argo-cluster.png)
 
 
 ## Step3: Setup Flux in workload cluster

@@ -15,7 +15,7 @@
 
 [Thanos](https://thanos.io/) is a open source, highly available Prometheus setup with long term storage capabilities. We can use it to store the metrics from multiple clusters and query them from a single place.
 
-![Thanos Architecture](./../imgs/lab13-thanos-architecture.jpg)
+![Thanos Architecture](./../assets/lab13-thanos-architecture.jpg)
 
 > Ref: [Thanos getting started](https://thanos.io/tip/thanos/getting-started.md/)
 
@@ -77,16 +77,16 @@ Check the minio console. The console is available at http://localhost:9001. Logi
 open http://<YOUR_SERVER_IP>:9001
 ```
 
-![Minio Console](./../imgs/lab13-minio-login-page.png)
+![Minio Console](./../assets/lab13-minio-login-page.png)
 
 Create the bucket named `thanos-bucket` in the minio console.
 
-![Minio Console](./../imgs/lab13-minio-create-bucket.png)
+![Minio Console](./../assets/lab13-minio-create-bucket.png)
 > Note: This bucket will be used as the remote storage for the thanos.
 
 Create the user named `thanos` with read and write permission in the minio console.
 
-![Minio Console](./../imgs/lab13-minio-create-user.png)
+![Minio Console](./../assets/lab13-minio-create-user.png)
 
 Now we have the minio server and the bucket ready. We can use it as the remote storage for the thanos.
 
@@ -95,7 +95,7 @@ Now we have the minio server and the bucket ready. We can use it as the remote s
 In [lab5](../lab05-prometheus-and-grafana/README.md) we have installed the prometheus and grafana with single cluster. To monitor the multiple clusters, we need to collect the metrics from multiple clusters. We can install the prometheus and thanos sidecar in workload clusters to collect the metrics and store them in the remote storage. In the management cluster, we can install the thanos query to query the metrics. and show them in the grafana.
 
 
-![multiple prometheus with thanos](../imgs/lab13-multiple-prometheus-with-thanos.png)
+![multiple prometheus with thanos](../assets/lab13-multiple-prometheus-with-thanos.png)
 > Ref: [observability.thomasriley.co.uk](https://observability.thomasriley.co.uk/prometheus/using-thanos/high-availability/)
 
 Now let's install the prometheus and thanos sidecar in the workload clusters.
@@ -354,11 +354,11 @@ open http://localhost:8080
 
 You can see the prometheus-like gui. You can query the metrics from the cluster1 and cluster2.
 
-![Thanos Query](./../imgs/lab13-thanos-query.png)
+![Thanos Query](./../assets/lab13-thanos-query.png)
 
 Click the `Stores` button, you can see the sidecar and store connection status.
 
-![Thanos Stores](./../imgs/lab13-thanos-stores.png)
+![Thanos Stores](./../assets/lab13-thanos-stores.png)
 
 
 ## Step4: Install grafana in the management cluster
@@ -433,12 +433,12 @@ Access the grafana at http://localhost:3000. Login with the username `admin` and
 open http://localhost:3000
 ```
 
-![grafana-login](../imgs/lab5-grafana-login.png)
+![grafana-login](../assets/lab5-grafana-login.png)
 
 
 Check the dashboards. You can see the multi cluster dashboards
 
-![grafana-multi-cluster-dashboard](../imgs/lab13-grafana-multi-cluster-dashboard.png)
+![grafana-multi-cluster-dashboard](../assets/lab13-grafana-multi-cluster-dashboard.png)
 
 
 ## Conclusion
