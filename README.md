@@ -1,17 +1,17 @@
 # Hybrid Cloud Multi-Cluster Kubernetes Infrastructure
 
+[![Kubernetes](https://img.shields.io/badge/Kubernetes-v1.30-326CE5?logo=kubernetes&logoColor=white)](https://kubernetes.io/)
+[![Karmada](https://img.shields.io/badge/Karmada-v1.9-326CE5)](https://karmada.io/)
+[![Cilium](https://img.shields.io/badge/Cilium-CNI-60B33C?logo=cilium&logoColor=white)](https://cilium.io/)
+[![FluxCD](https://img.shields.io/badge/FluxCD-GitOps-005FAF?logo=flux&logoColor=white)](https://fluxcd.io/)
+[![ArgoCD](https://img.shields.io/badge/ArgoCD-GitOps-EF7B4D?logo=argo&logoColor=white)](https://argoproj.github.io/cd/)
+[![Prometheus](https://img.shields.io/badge/Prometheus-Monitoring-E6522C?logo=prometheus&logoColor=white)](https://prometheus.io/)
+[![Grafana](https://img.shields.io/badge/Grafana-Observability-F46800?logo=grafana&logoColor=white)](https://grafana.com/)
+[![Thanos](https://img.shields.io/badge/Thanos-Global_Query-4EADEB)](https://thanos.io/)
+
 ## Project Overview
 
-This project demonstrates a robust, production-grade **Hybrid Cloud Multi-Cluster Kubernetes Infrastructure** designed for scalability, high performance, and high availability. It integrates advanced cloud-native technologies to manage, monitor, and deploy applications seamlessly across multiple clusters, providing a unified control plane and global observability.
-
-### Key Features & Technologies
-
-*   **Container Orchestration & Management:** Multi-cluster application distribution orchestrated by **Karmada**.
-*   **GitOps & CI/CD Pipelines:** Automated synchronization via **Argo CD** and **Flux CD** using Helm Charts from Git repositories.
-*   **Networking:** High-performance multi-cluster networking achieved through **Cilium CNI**.
-*   **Observability:** A centralized monitoring stack combining **Thanos, Prometheus, and Grafana** for global metric collection and visualization.
-*   **Infrastructure as Code (IaC):** Management of Kubernetes manifests and Helm Charts.
-*   **Storage:** Configured Kubernetes **Persistent Volume Claims (PVCs)** for persistent storage management.
+This project demonstrates a robust, production-grade **Hybrid Cloud Multi-Cluster Kubernetes Infrastructure** designed for scalability, high performance, and high availability. It integrates advanced cloud-native technologies to manage, monitor, and deploy applications seamlessly across multiple workload clusters from a centralized management plane.
 
 ---
 
@@ -27,27 +27,13 @@ This project demonstrates a robust, production-grade **Hybrid Cloud Multi-Cluste
 
 ---
 
-## Components Detail
+## Core Components
 
-### Kind
-[kind](https://kind.sigs.k8s.io/) (Kubernetes In Docker) is a tool that enables rapid deployment and operation of Kubernetes clusters in a local environment. Leveraging Docker container technology, it simulates multiple Kubernetes nodes on a single machine.
-
-### K3s
-[k3s](https://k3s.io/) is a lightweight Kubernetes that retains core functionalities while removing less utilized features, resulting in lower resource consumption and faster startup speed.
-
-### Cilium
-[Cilium](https://cilium.io/) provides and manages network and security services for application containers using Linux kernel features such as BPF, XDP, and IPVS for maximum efficiency.
-
-### Karmada
-[karmada](https://karmada.io/) is a Kubernetes-based multi-cloud and multi-cluster orchestration platform. It provides central management of cloud-native workloads and applications across clouds and clusters.
-
-### Monitoring Stack (Thanos + Prometheus + Grafana)
-*   **Prometheus**: An open source monitoring system and time series database for generating and collecting metrics.
-*   **Thanos**: Highly available Prometheus setup with long-term storage capabilities and a global query view.
-*   **Grafana**: Visualization and analytics software for turning time-series data into beautiful graphs and dashboards.
-
-### HAProxy
-[HAProxy](https://www.haproxy.org/) is a fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.
+*   **Karmada**: Orchestrates multi-cluster application distribution and management.
+*   **Cilium CNI**: High-performance networking and security with eBPF technology.
+*   **GitOps (FluxCD & ArgoCD)**: Automated synchronization of Helm charts and K8s manifests.
+*   **Observability Stack**: Centralized monitoring with **Thanos**, **Prometheus**, and **Grafana** for global visibility.
+*   **Infrastructure Components**: Lightweight clusters using **Kind** and **K3s**, with **HAProxy** for load balancing.
 
 ---
 
