@@ -22,7 +22,7 @@ This project demonstrates a robust, production-grade **Hybrid Cloud Multi-Cluste
 *Figure 1: Kubernetes multi-cluster architecture overview*
 
 ### Multi-cluster GitOps Pipeline
-![Multi-cluster GitOps Pipeline](https://hackmd.io/_uploads/B1XjsSxezl.jpg)
+![Multi-cluster GitOps Pipeline](./labs/assets/gitops-pipeline.jpg)
 *Figure 2: Multi-cluster GitOps deployment pipeline*
 
 ---
