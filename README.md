@@ -1,44 +1,73 @@
-# Multi-Cluster K8s Monitoring System
+# Hybrid Cloud Multi-Cluster Kubernetes Infrastructure
 
-## Introduction
+## Project Overview
 
-This is the documentation for a robust Hybrid Cloud Multi-Cluster Kubernetes Infrastructure. This project demonstrates a production-grade setup for managing, monitoring, and deploying applications across multiple clusters using modern cloud-native technologies.
+This project demonstrates a robust, production-grade **Hybrid Cloud Multi-Cluster Kubernetes Infrastructure** designed for scalability, high performance, and high availability. 
 
+The infrastructure was built on **Proxmox Virtual Environment (PVE) Type-1 virtualization**, running **Ubuntu Server 24.04 LTS** across all virtual machines (VMs). It integrates advanced cloud-native technologies to manage, monitor, and deploy applications seamlessly across multiple clusters.
 
-## Components
+### Key Features & Technologies
 
-### Kind
+*   **Container Orchestration & Management:** Multi-cluster application distribution orchestrated by **Karmada**.
+*   **GitOps & CI/CD Pipelines:** Automated synchronization via **Argo CD** and **Flux CD** using Helm Charts from Git repositories.
+*   **Networking:** High-performance multi-cluster networking achieved through **Cilium CNI**.
+*   **Observability:** A centralized monitoring stack combining **Thanos, Prometheus, and Grafana** for global metric collection and visualization.
+*   **Infrastructure as Code (IaC):** Management of Kubernetes manifests and Helm Charts.
+*   **Storage:** Configured Kubernetes **Persistent Volume Claims (PVCs)** for persistent storage management.
 
-[kind](https://kind.sigs.k8s.io/) (Kubernetes In Docker) is a tool that enables rapid deployment and operation of Kubernetes clusters in a local environment. Leveraging Docker container technology, it simulates multiple Kubernetes nodes on a single machine, creating a Kubernetes environment for testing, development, and experimentation purposes.
+---
 
-### K3s
+## System Architecture
 
-[k3s](https://k3s.io/) is a lightweight Kubernetes that retains the core functionalities of Kubernetes while removing some less utilized features, resulting in lower resource consumption and faster startup speed.
+### Multi-cluster Monitoring Architecture
+![Multi-cluster Monitoring Architecture](https://hackmd.io/_uploads/H1vXiBelGg.jpg)
+*Figure 1: Kubernetes multi-cluster architecture*
 
+### Multi-cluster GitOps Pipeline
+![Multi-cluster GitOps Pipeline](https://hackmd.io/_uploads/B1XjsSxezl.jpg)
+*Figure 2: Multi-cluster GitOps deployment pipeline*
+
+---
+
+## Components Detail
+
+### Kind & K3s
+Utilized for rapid deployment and lightweight Kubernetes environments, perfect for testing and development of cluster nodes.
 
 ### Cilium
-
-[Cilium](https://cilium.io/) is a software package that provides and manages network and security services for application containers running on Linux. It is designed to be scalable, efficient, and effective on containerized applications using Linux kernel features such as BPF, XDP, and IPVS.Cilium 
-
+Manages network and security services using Linux kernel features such as BPF and XDP for maximum efficiency.
 
 ### Karmada
+Provides central management and orchestration for cloud-native workloads across multi-cloud and multi-cluster environments.
 
-[karmada](https://karmada.io/) is a Kubernetes-based multi-cloud and multi-cluster orchestration platform. It provides central management of cloud-native workloads and applications, and enables workload and application portability across clouds and clusters.
+### Monitoring Stack (Thanos + Prometheus + Grafana)
+*   **Prometheus**: Metrics collection and alerting.
+*   **Thanos**: Provides a global query view and long-term storage capabilities for highly available Prometheus setups.
+*   **Grafana**: Advanced visualization and analytics dashboard.
 
+---
 
-### Prometheus
+## Laboratory Guide
 
-[Prometheus](https://prometheus.io/) is an open source monitoring system and time series database. It addresses many aspects of monitoring such as the generation and collection of metrics, graphing the resulting data on dashboards, and alerting on anomalies.
+This repository contains a comprehensive 15-lab series covering the entire setup process:
 
+1.  **Lab 01**: Cilium Setup
+2.  **Lab 02**: Cilium Gateway API
+3.  **Lab 03**: Simple App Deployment
+4.  **Lab 04**: Hubble Observability
+5.  **Lab 05**: Prometheus and Grafana
+6.  **Lab 06**: Cluster Mesh
+7.  **Lab 07**: Multi-cluster Setup
+8.  **Lab 08**: Karmada Setup
+9.  **Lab 09**: Simple App Propagating
+10. **Lab 10**: HAProxy Setup
+11. **Lab 11**: Multi-cluster Failover
+12. **Lab 12**: Network Policy
+13. **Lab 13**: Multi-cluster Monitoring
+14. **Lab 14**: Alert Manager
+15. **Lab 15**: GitOps (ArgoCD/FluxCD)
 
-### Grafana
+---
 
-[Grafana](https://grafana.com/) is an open source visualization and analytics software. It allows you to query, visualize, alert on, and explore your metrics no matter where they are stored. In plain English, it provides you with tools to turn your time-series database (TSDB) data into beautiful graphs and visualizations.
-
-### Thanos
-
-[Thanos](https://thanos.io/) is a open source, highly available Prometheus setup with long term storage capabilities. It provides a global query view, high availability, data backup with historical, cheap data access as its core features in a single binary.
-
-### HAProxy
-
-[HAProxy](https://www.haproxy.org/) is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications. It is particularly suited for web sites crawling under very high loads while needing persistence or Layer7 processing. Supporting tens of thousands of connections is clearly realistic with todays hardware.
+## Related Repositories
+*   [k8s-multicluster-gitops](https://github.com/Benedict-CS/k8s-multicluster-gitops): GitOps Manifests and Helm Charts used for automated deployment in this infrastructure.
