@@ -2,9 +2,7 @@
 
 ## Project Overview
 
-This project demonstrates a robust, production-grade **Hybrid Cloud Multi-Cluster Kubernetes Infrastructure** designed for scalability, high performance, and high availability. 
-
-The infrastructure was built on **Proxmox Virtual Environment (PVE) Type-1 virtualization**, running **Ubuntu Server 24.04 LTS** across all virtual machines (VMs). It integrates advanced cloud-native technologies to manage, monitor, and deploy applications seamlessly across multiple clusters.
+This project demonstrates a robust, production-grade **Hybrid Cloud Multi-Cluster Kubernetes Infrastructure** designed for scalability, high performance, and high availability. It integrates advanced cloud-native technologies to manage, monitor, and deploy applications seamlessly across multiple clusters, providing a unified control plane and global observability.
 
 ### Key Features & Technologies
 
@@ -19,9 +17,9 @@ The infrastructure was built on **Proxmox Virtual Environment (PVE) Type-1 virtu
 
 ## System Architecture
 
-### Multi-cluster Monitoring Architecture
-![Multi-cluster Monitoring Architecture](https://hackmd.io/_uploads/H1vXiBelGg.jpg)
-*Figure 1: Kubernetes multi-cluster architecture*
+### Multi-cluster Infrastructure Architecture
+![Multi-cluster Infrastructure Architecture](./labs/assets/architecture-overview.jpg)
+*Figure 1: Kubernetes multi-cluster architecture overview*
 
 ### Multi-cluster GitOps Pipeline
 ![Multi-cluster GitOps Pipeline](https://hackmd.io/_uploads/B1XjsSxezl.jpg)
@@ -57,21 +55,21 @@ The infrastructure was built on **Proxmox Virtual Environment (PVE) Type-1 virtu
 
 This repository contains a comprehensive 15-lab series covering the entire setup process:
 
-1.  **Lab 01**: Cilium Setup
-2.  **Lab 02**: Cilium Gateway API
-3.  **Lab 03**: Simple App Deployment
-4.  **Lab 04**: Hubble Observability
-5.  **Lab 05**: Prometheus and Grafana
-6.  **Lab 06**: Cluster Mesh
-7.  **Lab 07**: Multi-cluster Setup
-8.  **Lab 08**: Karmada Setup
-9.  **Lab 09**: Simple App Propagating
-10. **Lab 10**: HAProxy Setup
-11. **Lab 11**: Multi-cluster Failover
-12. **Lab 12**: Network Policy
-13. **Lab 13**: Multi-cluster Monitoring
-14. **Lab 14**: Alert Manager
-15. **Lab 15**: GitOps (ArgoCD/FluxCD)
+1.  **[Lab 01: Cilium Setup](./labs/lab01-cilium-setup)**
+2.  **[Lab 02: Cilium Gateway API](./labs/lab02-cilium-gateway-api)**
+3.  **[Lab 03: Simple App Deployment](./labs/lab03-simple-app-deployment)**
+4.  **[Lab 04: Hubble Observability](./labs/lab04-hubble-observability)**
+5.  **[Lab 05: Prometheus and Grafana](./labs/lab05-prometheus-and-grafana)**
+6.  **[Lab 06: Cluster Mesh](./labs/lab06-cluster-mesh)**
+7.  **[Lab 07: Multi-cluster Setup](./labs/lab07-multi-cluster-setup)**
+8.  **[Lab 08: Karmada Setup](./labs/lab08-karmada-setup)**
+9.  **[Lab 09: Simple App Propagating](./labs/lab09-simple-app-propagating)**
+10. **[Lab 10: HAProxy Setup](./labs/lab10-haproxy-setup)**
+11. **[Lab 11: Multi-cluster Failover](./labs/lab11-multi-cluster-failover)**
+12. **[Lab 12: Network Policy](./labs/lab12-network-policy)**
+13. **[Lab 13: Multi-cluster Monitoring](./labs/lab13-multi-cluster-monitoring)**
+14. **[Lab 14: Alert Manager](./labs/lab14-alert-manager)**
+15. **[Lab 15: GitOps (ArgoCD/FluxCD)](./labs/lab15-gitops)**
 
 ---
 
