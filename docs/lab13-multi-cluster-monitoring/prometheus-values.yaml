@@ -1,0 +1,18 @@
+prometheus:
+  thanosService:
+    enabled: true
+  thanosServiceExternal:
+    enabled: true
+    type: NodePort
+  prometheusSpec:
+    disableCompaction: true
+    externalLabels: 
+      cluster: member-cluster1 # Change to your member cluster name
+    thanos:
+      objectStorageConfig:
+        name: thanos
+        key: object-store.yaml
+grafana:
+  enabled: false
+alertmanager:
+  enabled: false

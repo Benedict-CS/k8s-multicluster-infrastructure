@@ -1,0 +1,18 @@
+objstoreConfig: |-
+  type: s3
+  config:
+    endpoint: "192.168.50.100:9000"
+    bucket: "thanos"
+    access_key: "thanos"
+    secret_key: "thanos-pass"
+    insecure: true
+querier:
+  stores:
+    - 192.168.50.101:30901 # Change to your member cluster1 thanos-query service IP
+    - 192.168.50.102:30901 # Change to your member cluster2 thanos-query service IP
+bucketweb:
+  enabled: true
+compactor:
+  enabled: true
+storegateway:
+  enabled: true

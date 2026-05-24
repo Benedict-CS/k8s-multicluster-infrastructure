@@ -1,0 +1,7 @@
+type: S3
+config:
+  endpoint: "192.168.50.100:9000" # Change to your MinIO IP
+  bucket: "thanos" # Change to your bucket name
+  access_key: "thanos" # Change to your access key
+  secret_key: "thanos_pass" # Change to your secret key
+  insecure: true

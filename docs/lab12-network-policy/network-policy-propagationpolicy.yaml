@@ -1,0 +1,14 @@
+apiVersion: policy.karmada.io/v1alpha1
+kind: PropagationPolicy
+metadata:
+  name: network-policy-propagation
+spec:
+  resourceSelectors:
+    - apiVersion: cilium.io/v2
+      kind: CiliumNetworkPolicy
+      name: whoami-network-policy
+  placement:
+    clusterAffinity:
+      clusterNames:
+        - cluster1
+        - cluster2

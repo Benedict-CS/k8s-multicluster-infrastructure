@@ -1,0 +1,33 @@
+apiVersion: policy.karmada.io/v1alpha1
+kind: PropagationPolicy
+metadata:
+  name: whoami-propagation
+spec:
+  resourceSelectors:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: whoami-deployment
+    - apiVersion: v1
+      kind: Service
+      name: whoami-service
+    - apiVersion: gateway.networking.k8s.io/v1beta1
+      kind: HTTPRoute
+      name: http-whoami
+  placement:
+    clusterAffinity:
+      clusterNames:
+        - cluster1
+        - cluster2
+    replicaScheduling:
+      replicaDivisionPreference: Weighted
+      replicaSchedulingType: Divided
+      weightPreference:
+        staticWeightList:
+          - targetCluster:
+              clusterNames:
+                - cluster1
+            weight: 2
+          - targetCluster:
+              clusterNames:
+                - cluster2
+            weight: 1
